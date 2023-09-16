@@ -8,7 +8,7 @@
 
 }
 body{
-    background: #001e4d;
+    background: linear-gradient(108deg, #1157c5, #ff0d0d);
 }
 .app{
     background: #fff;
@@ -77,4 +77,13 @@ body{
 }
 .incorrect{
     background: #ff9393;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    color: #fff;
+    font-weight: 500;
 }
