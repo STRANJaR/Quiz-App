@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
 }
 body{
     background: #001e4d;
@@ -16,10 +20,10 @@ body{
 }
 
 .app h1{
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     color: #001e4d;
     font-weight: 600;
-    border-bottom: 1px solid #001e4d;
+    border-bottom: 5px solid orangered;
     padding-bottom: 2rem;
 
 }
@@ -37,7 +41,7 @@ body{
 .btn{
     background: #fff;
     color: #222;
-    font-weight: 500;
+    font-weight: 600;
     width: 100%;
     border: 1px solid #222;
     padding: 0.7rem;
@@ -56,7 +60,7 @@ body{
     cursor: no-drop;
 }
 #next-btn{
-    background: #001e4d;
+    background: orangered;
     color: #fff;
     font-weight: 500;
     width: 7rem;
