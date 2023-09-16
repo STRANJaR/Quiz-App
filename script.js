@@ -69,6 +69,7 @@ function startQuiz(){
 }
 
 function showQuestion(){
+    resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
@@ -91,7 +92,7 @@ function resetState(){
     nextButton.style.display = 'none';
     while(answersButtons.firstChild){
         answersButtons.removeChild(answersButtons.firstChild);
-    }
+    } 
 }
 
 
@@ -100,6 +101,7 @@ function selectAnswer(param){
     const isCorrect = selectBtn.dataset.correct === 'true';
     if(isCorrect){
         selectBtn.classList.add('correct');
+        score ++;
     }
     else{
         selectBtn.classList.add('incorrect');
@@ -108,7 +110,7 @@ function selectAnswer(param){
     Array.from(answersButtons.children).forEach(button =>{
         if(button.dataset.correct === 'true'){
             button.classList.add('correct');
-
+            
         }
         button.disabled =  true;
 
@@ -118,9 +120,9 @@ function selectAnswer(param){
 
 function showScore(){
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}`;
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = 'Play Again';
-    nextButton.style.display = 'block'
+    nextButton.style.display = 'block';
 }
 
 function handleNextButton(){
@@ -135,9 +137,9 @@ function handleNextButton(){
 
 nextButton.addEventListener('click', ()=>{
     if(currentQuestionIndex < questions.length){
-        handleNextButton(); 
+        handleNextButton();
     }else{
-
+        startQuiz();
     }
 })
 
