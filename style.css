@@ -9,6 +9,7 @@
 }
 body{
     background: linear-gradient(108deg, #1157c5, #ff0d0d);
+    height: 100vh;
 }
 .app{
     background: #fff;
