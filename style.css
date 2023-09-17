@@ -61,7 +61,7 @@ body{
     cursor: no-drop;
 }
 #next-btn{
-    background: orangered;
+    background: linear-gradient(108deg, #1157c5, #ff0d0d);
     color: #fff;
     font-weight: 500;
     width: 7rem;
